@@ -1,0 +1,52 @@
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % cd /Users/komiyanaoki/SAMURAI_ENGINEER/lesson/kadai/git-github-kadai
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git init
+Initialized empty Git repository in /Users/komiyanaoki/SAMURAI_ENGINEER/lesson/kadai/git-github-kadai/.git/
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git add .
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git commit -m "最初のコミット"
+[main (root-commit) 5b80933] 最初のコミット
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git_challenge/hello_world.txt
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git branch -M main
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git remote add origin git@github.com:naoki0810/git-github-kadai.git
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git push -u origin main
+Enter passphrase for key '/Users/komiyanaoki/.ssh/id_rsa': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 305 bytes | 305.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:naoki0810/git-github-kadai.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % echo "こんにちは、世界！" >> hello_world.txt
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git add .
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git commit -m "2回目のコミット"
+[main 85095e3] 2回目のコミット
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git branch -M main
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git remote add origin git@github.com:naoki0810/git-github-kadai.git
+error: remote origin already exists.
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git push -u origin main
+Enter passphrase for key '/Users/komiyanaoki/.ssh/id_rsa': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Writing objects: 100% (4/4), 372 bytes | 372.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:naoki0810/git-github-kadai.git
+   5b80933..85095e3  main -> main
+branch 'main' set up to track 'origin/main'.
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git log
+commit 85095e34bb1b6258ce943147908fd80ce4772ae2 (HEAD -> main, origin/main)
+Author: naoki0810 <naoki.komiya.98ss@gamil.com>
+Date:   Tue Oct 31 00:32:20 2023 +0900
+
+    2回目のコミット
+
+commit 5b80933f8ccb2a6a76d943a5c7bf382af76721d6
+Author: naoki0810 <naoki.komiya.98ss@gamil.com>
+Date:   Tue Oct 31 00:28:04 2023 +0900
+
+    最初のコミット
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % git log --oneline
+85095e3 (HEAD -> main, origin/main) 2回目のコミット
+5b80933 最初のコミット
+komiyanaoki@komiyanaokinoMacBook-Air git-github-kadai % 
